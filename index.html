@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Expense Tracker</h1>
+      <button id="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+      <button onclick="generatePDF()">📄 Generate Report</button>
+    </header>
+    <div class="balance">
+      <h2>Total Balance: ₹<span id="balance">0</span></h2>
+    </div>
+    <div class="form">
+      <input type="text" id="description" placeholder="Description">
+      <input type="number" id="amount" placeholder="Amount">
+      <input type="date" id="date">
+      <button onclick="addTransaction()">Add Transaction</button>
+    </div>
+    <ul id="transactions"></ul>
+    <canvas id="expenseChart"></canvas>
+  </div>
+  
+  <footer>
+    <p>Made with ❤️ by Anshuman Sahoo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
